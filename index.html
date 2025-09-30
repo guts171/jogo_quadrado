@@ -71,14 +71,14 @@ button:hover {
 
 <script>
   let pontos = 0;
-  let quadrado = document.getElementByid("quadrado");
-  let placar = document.getElementByid("placar");
-  let jogo = document.getElementBYid("jogo");
+  let quadrado = document.getElementById("quadrado");
+  let placar = document.getElementById("placar");
+  let jogo = document.getElementById("jogo");
   let intervalo;
 
   function iniciarjogo() {
      pontos = 0;
-     placar.textCotent = "Pontuação: 0";
+     placar.textContent = "Pontuação: 0";
      moverQuadrado();
      quadrado.style.display = "block";
 
@@ -87,7 +87,7 @@ button:hover {
 
     function moverQuadrado() {
        let largura = jogo.clientWidth - 50;
-       let altura = jogo.clientheight - 50;
+       let altura = jogo.clientHeight - 50;
 
        let posX = Math.floor(Math.random() + largura);
        let posY = Math.floor(Math.random() + altura);
